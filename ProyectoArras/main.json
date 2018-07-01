@@ -1,0 +1,194 @@
+{
+    "juego":[{
+            "tablero1":[{
+                "pieza1":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza2":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza3":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza4":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza6":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza7":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza8":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza9":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                
+            }],
+        "tablero2":[{
+                "pieza1":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza2":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza3":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza4":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza6":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza7":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza8":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza9":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }]
+                
+            }],
+        "tablero3":[{
+                "pieza1":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza2":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza3":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza4":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza5":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza6":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza7":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza8":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }],
+                "pieza9":[{
+                    "id": "",
+                    "posicionX": "",
+                    "posicionY": "",
+                    "urlImagen": ""
+                }]
+                
+            }]
+        
+        }]
+}
