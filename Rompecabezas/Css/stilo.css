@@ -1,0 +1,80 @@
+  .day {
+  border: 5px dashed transparent;
+  background: #ddd;
+  position: relative;
+}
+.day.hovering {
+  background: #b6d6fb;
+  border-color: #276cbc;
+}
+
+#e1 {
+    width : 40px;
+    height : 40px;
+    background : black;
+    position: absolute;
+    z-index: 1000;
+}
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9 {
+    width : 40px;
+    height : 40px;
+    border-style: dotted;
+    position: absolute;
+}
+
+#elementos div{
+    width : 80px;
+    height : 80px;
+    background : black;
+    position: absolute;
+    z-index: 1000;
+}
+#elementos {
+    height: 15vh;
+    background: steelblue;
+    position: relative;
+}
+
+#tablero div{
+    width : 80px;
+    height : 80px;
+    background : black;
+    position: absolute;
+
+}
+#tablero {
+    height: 100%;
+    background: steelblue;
+    position: relative;
+}
+.tablero {
+    height: 85vh;
+    background: red;
+    position: relative;
+
+}
+.triangulo{
+    position: absolute;
+}
+.rectangulo{
+    position: absolute;
+}
+.cuadrado{
+    position: absolute;
+}
+
+@media (min-width: 576px) {
+#elementos {
+    height: 100vh;
+    background: steelblue;
+    position: relative;
+}
+.tablero {
+    height: 100vh;
+    background: red;
+    position: relative;
+}
+}
+
+    
