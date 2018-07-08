@@ -1,0 +1,109 @@
+  .day {
+  border: 5px dashed transparent;
+  background: #ddd;
+  position: relative;
+}
+.day.hovering {
+  background: #b6d6fb;
+  border-color: #276cbc;
+}
+.intro{
+    max-width:900px;
+    padding:25% 10px;
+    margin:10px auto;
+    text-align:center;
+    max-height:100px;
+    background-color: transparent !important;
+}
+.pure-button { 
+    margin: 5px 0; 
+    text-decoration: none !important; 
+}
+.button-lg { 
+    margin: 5px 0; 
+    padding: .65em 1.6em; 
+    font-size: 105%; 
+    border-style: dotted;
+}
+h1{
+    color: mediumvioletred; 
+    font-family: "Source Sans Pro", sans-serif; 
+    font-weight: 300; 
+    margin: 0 0 0.5em;
+    opacity: 0.5;
+}
+#e1 {
+    width : 40px;
+    height : 40px;
+    background : black;
+    position: absolute;
+    z-index: 1000;
+}
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9 {
+    width : 40px;
+    height : 40px;
+    border-style: solid;
+    position: absolute;
+}
+
+#elementos div{
+    width : 214px;
+    height : 136px;
+    position: absolute;
+    z-index: 1000;
+    
+}
+#elementos {
+    height: 15vh;
+    background: none !important;
+    position: relative;
+}
+
+#tablero div{
+    width : 214px;
+    height : 136px;
+    background : black;
+    position: absolute;
+}
+#tablero {
+    height: 100%;
+    background: steelblue;
+    position: relative;
+    text-align: center;
+}
+.tablero {
+    height: 85vh;
+    background: red;
+    position: relative;
+
+}
+.triangulo{
+    position: absolute;
+}
+.rectangulo{
+    position: absolute;
+}
+.cuadrado{
+    position: absolute;
+}
+
+@media (min-width: 576px) {
+    #elementos {
+        height: 100vh;
+        background: steelblue;
+        position: relative;
+    }
+    .tablero {
+        height: 100vh;
+        background: red;
+        position: relative;
+    }
+    .intro{
+        height: 100vh;
+        background: white;
+        position: relative;
+    }
+}
+
+    
