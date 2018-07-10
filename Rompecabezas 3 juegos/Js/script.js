@@ -4,6 +4,8 @@ const tablaespacios = document.getElementById( 'tablero' );
 let currentlyDragging = null;
 var contadorAciertos = 0;
 var contadorErrores = 0;
+
+//var objPiezas= '[{ "id" : "1", "x" : "5", "y" : "5", "color" : "red" }, { "id" : "2", "x" : "5", "y" : "150", "color" : "green" }, { "id" : "3", "x" : "90", "y" : "75", "color" : "yellow" }, { "id" : "4", "x" : "5", "y" : "295", "color" : "black" }, { "id" : "5", "x" : "90", "y" : "220", "color" : "brown" }, { "id" : "6", "x" : "5", "y" : "440", "color" : "white" }, { "id" : "7", "x" : "90", "y" : "365", "color" : "gray" }, { "id" : "8", "x" : "5", "y" : "585", "color" : "purple" }, { "id" : "9", "x" : "90", "y" : "510", "color" : "turquoise" } ]';
 var piezas = [
     {id: 1, x: 5, y: 5, color: "red"},
     {id: 2, x: 5, y: 150, color: "green"},
@@ -15,6 +17,8 @@ var piezas = [
     {id: 8, x: 5, y: 585, color: "purple"},
     {id: 9, x: 90, y: 510, color: "turquoise"},
 ];
+
+//var espacios= '[{ "id" : "1", "x" : "435", "y" : "272", "color" : "red" }, { "id" : "2", "x" : "435", "y" : "139", "color" : "green" }, { "id" : "3", "x" : "435", "y" : "5", "color" : "yellow" }, { "id" : "4", "x" : "221", "y" : "272", "color" : "black" }, { "id" : "5", "x" : "221", "y" : "139", "color" : "brown" }, { "id" : "6", "x" : "221", "y" : "5", "color" : "white" }, { "id" : "7", "x" : "7", "y" : "272", "color" : "gray" }, { "id" : "8", "x" : "7", "y" : "139", "color" : "purple" }, { "id" : "9", "x" : "7", "y" : "5", "color" : "turquoise" } ]';
 var espacios = [
     {id: 9, x: 7, y: 5, color: "turquoise"},       
     {id: 8, x: 7, y: 139, color: "purple"},        
