@@ -1,0 +1,11 @@
+{
+    "piezas":[{
+            "id":"p1",
+            "posx":"5"
+            "posy":"20"
+        },
+        }
+        
+        
+        var strDatos= '{"tablero":[{"cuadros":[{"id", "5","posx", "20px", "posy", "30px", "url", "/img/imagen11.png"},
+        {
