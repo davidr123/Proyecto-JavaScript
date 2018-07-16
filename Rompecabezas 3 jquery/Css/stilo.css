@@ -9,6 +9,12 @@ body {
 }
 
 
+h3{
+    color: dimgray;
+    font-size: 40px;
+    }
+
+
 .day {
   border: 5px dashed transparent;
   background: #ddd;
@@ -18,12 +24,11 @@ body {
   background: #b6d6fb;
   border-color: #276cbc;
 }
+
 .intro{
-    max-width:900px;
-    padding:25% 10px;
-    margin:10px auto;
+    padding:50% 5px;
+    margin: 0 auto;
     text-align:center;
-    max-height:100px;
     background-color: transparent !important;
     
 }
@@ -48,7 +53,7 @@ body {
     background-color:#3369ff;
     display:inline-block;
     box-shadow:inset 0 -0.7em 0 -0.40em rgba(0,0,0,0.17);
-    border-radius:0.50em;
+    border-radius:3em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -70,14 +75,6 @@ a:link
 text-decoration:none; }
 
 
-/*Efecto aparecer-desaparecer*/
-
-.game-button.game-button--click,
-.game-buton:focus {
-	outline: none;
-	color: #3c8ddc;
-}
-
 .game-button::after {
 	content: '';
 	position: absolute;
@@ -93,36 +90,12 @@ text-decoration:none; }
 
 
 
-/* Effect Boris */
-
-.game-button::after {
-	background: rgba(111,148,182,0.1);
-}
-
-.game-button .game-button--click::after {
-	animation: anim-effect-boris 0.3s forwards;
-}
-
-@keyframes anim-effect-boris {
-	0% {
-		transform: scale3d(0.3, 0.3, 1);
-	}
-	25%, 50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		transform: scale3d(1.2, 1.2, 1);
-	}
-}
-
-
-h1{
-    color: mediumvioletred; 
-    font-family: "Source Sans Pro", sans-serif; 
-    font-weight: 300; 
-    margin: 0 0 0.5em;
-    opacity: 0.5;
+#title{
+    color:mediumvioletred; 
+    font-family: 'Bubblegum';
+    font-size: 90px;
+    opacity: 0.7;
+    
 }
 #e1 {
     width : 40px;
@@ -193,16 +166,41 @@ h1{
         background: red;
         position: relative;
     }
+    
+    }
+
+
+   
+/*   Responsive landscape iPad */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+    .game-button{
+      display:block;
+      margin:0.4em auto;
+    }       
+      
     .intro{
-        height: 100vh;
         background: white;
         position: relative;
+       padding: 15% 5px;  
+    }     
+    
+    #title{
+        font-size: 60px;
+    }    
+    
+    h3{
+    color: dimgray;
+    font-size: 30px;
     }
+
 }
 
-/*Responsive de botones de la página de inicio*/
-@media all and (max-width:30em){
- .game-button{
-  display:block;
-  margin:0.4em auto;
- }
+
+
+
+
+    
