@@ -211,21 +211,6 @@ text-decoration:none;
         position: relative;
     }
 
-@media (min-width: 320px){
-    .container-fluid {
-        background-color: lightcyan;
-        display: block;
-        position: absolute;
-        height: 407px;
-        left: -4px;
-    }
-    body {
-        background-image: url(../img/fondoIntro.jpg);
-        width: 768px;
-        height: 588px;
-    }
-}
-
 @media (min-width: 768px, max-width: 1440px){
     .container-fluid {
         background-color: lightcyan;
