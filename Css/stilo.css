@@ -11,6 +11,8 @@ body {
 }
 
 .regresar{
+    position: relative;
+    padding: 200px 0 200px 0;
     float: right;
 }
 
