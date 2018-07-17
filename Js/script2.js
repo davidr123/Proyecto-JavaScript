@@ -1,3 +1,11 @@
+var source = "/music/song.mp3";
+var audio = new Audio();
+audio.addEventListener("load", function() {
+  audio.play();
+}, true);
+audio.src = source;
+audio.autoplay = true;
+
 class Usuario{
     constructor(obj){
         this.user=obj.user;
