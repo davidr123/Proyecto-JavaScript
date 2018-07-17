@@ -1,89 +1,91 @@
-const tablaElementos =$( 'elementos' );
-const tablaespacios = $( 'tablero' );
+class Usuario{
+    constructor(obj){
+        this.user=obj.user;
+        this.pass=obj.pass;
+        this.puntaje=obj.puntaje;
+        var arrRompecabezas=[];
+        obj.rompecabeza.forEach( function(rompecbz){
+            arrRompecabezas.push(new Rompecabeza(rompecbz.piezas, rompecbz.espacios));
+        });
+        this.rompecabeza=arrRompecabezas;
+    }
+}
 
-                     
-                      
-var piezas = [
-    {id: 1, x: 5, y: 5, color: "red"},
-    {id: 2, x: 5, y: 150, color: "green"},
-    {id: 3, x: 90, y: 75, color: "yellow"},
-    {id: 4, x: 5, y: 295, color: "black"},
-    {id: 5, x: 90, y: 220, color: "brown"},
-    {id: 6, x: 5, y: 440, color: "white"},
-    {id: 7, x: 90, y: 365, color: "gray"},
-    {id: 8, x: 5, y: 585, color: "purple"},
-    {id: 9, x: 90, y: 510, color: "turquoise"},
-];
-var espacios = [
-    {id: 9, x: 7, y: 5, color: "turquoise" },       
-    {id: 8, x: 7, y: 139, color: "purple"},        
-    {id: 7, x: 7, y: 272, color: "gray"},        
-    {id: 6, x: 221, y: 5, color: "white"},
-    {id: 5, x: 221, y: 139, color: "brown"},
-    {id: 4, x: 221, y: 272, color: "black"},
-    {id: 3, x: 435, y: 5, color: "yellow"},
-    {id: 2, x: 435, y: 139, color: "green"},
-    {id: 1, x: 435, y: 272, color: "red"},
-];
+class Rompecabeza{
+    constructor(piezas,espacios){
+        var arrPiezas=[];
+        piezas.forEach( function(pieza){
+            arrPiezas.push(new Piezas(pieza.id, pieza.posx,pieza.posy,pieza.url));
+        });
+        this.piezas=arrPiezas;
+                       
+        var arrEspacios=[];
+        espacios.forEach( function(espacio){
+            arrEspacios.push(new Espacios(espacio.id, espacio.posx,espacio.posy,espacio.url));
+        });               
+        this.espacios=arrEspacios;
+    }
+    
+}
+class Piezas {
+    constructor(id, posx, posy, url){
+        this.id = id;
+        this.posx = posx;
+        this.posy = posy;
+        this.url = url;
+    }
+}
+class Espacios {
+    constructor(id, posx, posy, url){
+        this.id = id;
+        this.posx = posx;
+        this.posy = posy;
+        this.url = url;
+    }
+}
 
 
+//en esta funcion estaba haciendo un foreach de los objetos del json y los estaba metiendo en un arreglo
 
+var arregloUsuarios= [];
 
 let currentlyDragging = null;
 var contadorAciertos = 0;
 var contadorErrores = 0;
 
-piezas.forEach( function(pieza){
-    
-    
+    $.getJSON('ejemplo.json', function(data){
+        
+        $.each(data, function(i, resultado){
+          arregloUsuarios.push(new Usuario(resultado))
+        });
+        console.log(arregloUsuarios[0].rompecabeza[0].piezas[0].width);
+        
+        $.each(arregloUsuarios[0].rompecabeza[0].piezas, function(i, pieza){
+            //var newdiv = $(document.createElement('div'));
+//            newdiv.css("background-image", "url('./img/peppa/" + pieza.id+ ".jpg')");
+//            newdiv.css('left', pieza.posx+ "px");
+//            newdiv.css('top', pieza.posy+"px");
+//            newdiv.attr("id", ""+pieza.id);
+            $('#elementos').append("<div id="+pieza.id+" style='background-image: url(&quot;./"+pieza.url+"&quot;); left: "+pieza.posx+"; top: "+pieza.posy+"'></div></div>");
+            $("#"+pieza.id).on("touchstart", inicio);
+            $("#"+pieza.id).on("touchend", soltar);
+            $("#"+pieza.id).on("touchmove", mover);
 
+         //   console.log("Start " + mover);
 
-    newdiv =  $( document.createElement('div'));
+        });
 
+        arregloUsuarios[0].rompecabeza[0].espacios.forEach( function(espacio){
+//            var newdiv =  $( document.createElement('div'));
+//            newdiv.css('backgroundColor',"transparent");
+//            newdiv.css("border-style", "dotted");
+//            newdiv.css('left', espacio.posx + "px");
+//            newdiv.css('top', espacio.posy+ "px");
+//            newdiv.attr("id", "tab"+espacio.id);
+            $('#tablero').append("<div id='tab"+espacio.id+"' style='background-color: transparent; border-style: dotted;left: "+espacio.posx+"; top: "+espacio.posy+"'></div>");
+        });
+    });
 
-    newdiv.css("background-image", "url('./img/peppa/" + pieza.id+ ".jpg')");
-
-    newdiv.css('left', pieza.x+ "px");
-    newdiv.css('top', pieza.y+"px");
-    newdiv.css('width', pieza.width+ "px");
-    newdiv.css('height', pieza.height+"px");
-    newdiv.attr("id", ""+pieza.id);
-    
-   
-    //console.log(pieza);
-    
-
-
-    
-    $('#elementos').append(newdiv);
-
-  $(newdiv).on("touchstart", inicio);
-    $(newdiv).on("touchend", soltar);
-    $(newdiv).on("touchmove", mover);
-    
- //   console.log("Start " + mover);
-
-});
-
-espacios.forEach( function(espacio){
-  newdiv =  $( document.createElement('div'));
-     
-    
-    newdiv.css('backgroundColor',"transparent");
- 
-    newdiv.css("border-style", "dotted");
-    newdiv.css("width", espacio.width);
-    newdiv.css("height", espacio.height);
-    newdiv.css('left', espacio.x + "px");
-    newdiv.css('top', espacio.y+ "px");
-
-    
-    newdiv.attr("id", "tab"+espacio.id);
-   
-     
-    $('#tablero').append(newdiv);
-    
-});
 
 function inicio(eve){
     
@@ -103,10 +105,6 @@ function inicio(eve){
 }
 
 function mover(eve){
-    
-   
-        
-      
     var touchLocation = eve.targetTouches[0];
      // $("#"+ e.target.id).css("left", touchLocation.clientX + 'px');
     var id = $("#"+ eve.target.id).attr("id");
