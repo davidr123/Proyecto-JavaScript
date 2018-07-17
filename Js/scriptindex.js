@@ -1,4 +1,4 @@
-var source = "./music/song.mp3";
+var source = "/music/song.mp3";
 var audio = new Audio();
 audio.addEventListener("load", function() {
   audio.play();
