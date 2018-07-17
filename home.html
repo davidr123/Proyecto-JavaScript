@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     
-    <meta charset="UTF-8">
-    <title>Peppa Pig - Rompecabeza</title>
     <link href="Css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Css/stilo.css">
-    <link rel="Shortcut Icon" href="img/puzzle-icon.ico" />
+  <script src="Js/jquery-3.3.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-4">
                 <div id="elementos">
@@ -24,18 +22,17 @@
                 </div>
             </div>
         </div>
-    </div>
-    <a href="index.html" id="game-button-back"><img src="img/regresar.png">Volver al menú</a>
-    
-    <div style="float:right">
+        <div class="regresar">
+            <a href="index.html" class="game-button"><img src="img/regresar.png">Volver al menú</a>
+        </div>
+        <div style="float:right">
             <h1>Puntaje</h1>
             <h2  id="puntaje"></h2>
         </div>
+    </div>
+    
 
-<script src="Js/script.js"></script><script src="Js/jquery-3.3.1.min.js" type="text/javascript"></script>
-<script src="Js/scriptindex.js"></script>  
-    <script src="Js/bootstrap.js"></script>
-    <script src="Js/bootstrap.min.js"></script>
+<script src="Js/script.js"></script>
     
 </body>
 </html>
