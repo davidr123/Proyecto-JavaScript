@@ -10,6 +10,9 @@ body {
  
 }
 
+.regresar{
+    float: right;
+}
 
 .intro{
     padding: 50% 5px;
