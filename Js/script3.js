@@ -60,7 +60,7 @@ var contadorErrores = 0;
         });
         console.log(arregloUsuarios[0].rompecabeza[2].piezas[0].width);
         
-        $.each(arregloUsuarios[0].rompecabeza[0].piezas, function(i, pieza){
+        $.each(arregloUsuarios[0].rompecabeza[2].piezas, function(i, pieza){
             //var newdiv = $(document.createElement('div'));
 //            newdiv.css("background-image", "url('./img/peppa/" + pieza.id+ ".jpg')");
 //            newdiv.css('left', pieza.posx+ "px");
@@ -75,7 +75,7 @@ var contadorErrores = 0;
 
         });
 
-        arregloUsuarios[0].rompecabeza[0].espacios.forEach( function(espacio){
+        arregloUsuarios[0].rompecabeza[2].espacios.forEach( function(espacio){
 //            var newdiv =  $( document.createElement('div'));
 //            newdiv.css('backgroundColor',"transparent");
 //            newdiv.css("border-style", "dotted");
