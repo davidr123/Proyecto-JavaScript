@@ -7,13 +7,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
- 
 }
 
 .regresar{
     position: relative;
-    padding: 200px 0 200px 0;
+    padding: 350px 0 250px 0;
     float: right;
+    font-family: 'Gaegu', cursive;
+    font-size: 200%;
 }
 
 .intro{
@@ -30,7 +31,13 @@ h3{
     text-align: center;
 } 
 
-
+.fondo{
+    width: 640px; 
+    height: 407px;
+    position: fixed;
+    float: right;
+    opacity: 0.2;
+}
 .day {
   border: 5px dashed transparent;
   background: #ddd;
@@ -133,9 +140,9 @@ text-decoration:none;
 }
 
 .container-fluid{
-   background-color: lightcyan;
+    background-color: lightcyan;
+    margin-left: 0.3%;
     display: block;
-    margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -204,6 +211,66 @@ text-decoration:none;
         position: relative;
     }
 
+@media (min-width: 320px){
+    .container-fluid {
+        background-color: lightcyan;
+        display: block;
+        position: absolute;
+        height: 407px;
+        left: -4px;
+    }
+    body {
+        background-image: url(../img/fondoIntro.jpg);
+        width: 768px;
+        height: 588px;
+    }
+}
 
-
-
+@media (min-width: 768px, max-width: 1440px){
+    .container-fluid {
+        background-color: lightcyan;
+        display: block;
+        position: absolute;
+        height: 407px;
+        left: -4px;
+    }
+    body {
+        background-image: url(../img/fondoIntro.jpg);
+        width: 768px;
+        height: 588px;
+    }
+    .fondo{
+        position: absolute;
+        left: -125px;
+        top: 5px;
+    }
+    .container{
+        padding: 100px 0 0 0;
+        position: relative;
+        left: 50%;
+    }
+}
+@media (min-width: 1440px){
+    .container-fluid {
+        background-color: lightcyan;
+        display: block;
+        position: absolute;
+        height: 407px;
+        left: -4px;
+    }
+    body {
+        background-image: url(../img/fondoIntro.jpg);
+        width: 768px;
+        height: 588px;
+    }
+    .fondo{
+        position: absolute;
+        left: -125px;
+        top: 5px;
+    }
+    .container{
+        padding: 100px 0 0 0;
+        position: relative;
+        left: 50%;
+    }
+}
