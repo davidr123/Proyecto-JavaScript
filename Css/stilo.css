@@ -1,18 +1,29 @@
-  body {
-    background-image: url(../img/fondoIntro.jpg);
-    display:block;
-    margin:auto;
-    background-repeat: no-repeat;  !important;
-    background-size: cover;      !important;
-    background-position: center; !important;
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@import url('https://fonts.googleapis.com/css?family=Gaegu:400,700|Kranky');
 
+body {
+    background-image: url(../img/fondoIntro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ 
 }
 
+
+.intro{
+    padding: 50% 5px;
+    }
 
 h3{
     color: dimgray;
     font-size: 40px;
     }
+
+   #button-container{
+    padding: 10px 0 10px 0;
+    text-align: center;
+} 
 
 
 .day {
@@ -25,33 +36,25 @@ h3{
   border-color: #276cbc;
 }
 
-/*Clase del index (seccion de rompecabeza y botones)*/
-.intro{
-    padding:50% 5px;
-    margin: 0 auto;
-    text-align:center;
-    background-color: transparent !important;
+#game-button-back { 
+    background-color:green;
+    display:inline-block;
+    box-shadow:inset 0 -0.7em 0 -0.40em rgba(0,0,0,0.17);
+    border-radius:3em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
+    font-weight:400;
+    color: white;
+    text-align:center; 
+    padding:10px;
+    width: 23%;
+    margin-left: 40%;
+    margin-top: 5%;
+}
     
-}
-
-.regresar{
-    width: 200px;
-    padding: 2% 5px;
-    margin: 10px auto;
-    text-align: center;
-    background-color: transparent !important;
-    position: relative;
-    top: 100px;
-    left: 170px
-}
-}
- { 
-    margin: 5px 0; 
-    text-decoration: none !important; 
-}
-
-/*Botones del index*/
-.game-button { 
+#game-button { 
     background-color:#3369ff;
     display:inline-block;
     box-shadow:inset 0 -0.7em 0 -0.40em rgba(0,0,0,0.17);
@@ -74,31 +77,40 @@ h3{
 
 a:link 
 { 
-text-decoration:none; }
-
-
-.game-button::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -35px 0 0 -35px;
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	opacity: 0;
-	pointer-events: none;
+text-decoration:none; 
 }
 
 
 
-#title{
-    color:mediumvioletred; 
-    font-family: 'Bubblegum';
-    font-size: 90px;
-    opacity: 0.7;
+
+#export-button{
+    background-color:red;
+    box-shadow:inset 0 -0.9em 0 -0.40em rgba(0,0,0,0.17);
+    border-radius:2em;
+    text-decoration:none;
+    color: white;
+    padding:10px;
+    width: 23%;
+    margin-left: 40%;
+    margin-top: 5%;
     
 }
+
+
+#puzzle-title{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: -150px;
+}
+
+#subtitle {
+    text-align: center;
+    color: dimgray;
+    font-family: 'Gaegu', cursive;
+    margin-top: 200px;
+    font-size: 50px;
+}
+
 #e1 {
     width : 40px;
     height : 40px;
@@ -114,9 +126,6 @@ text-decoration:none; }
     position: absolute;
 }
 
-
-
-
 .container-fluid{
    background-color: lightcyan;
     display: block;
@@ -124,7 +133,6 @@ text-decoration:none; }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 770px;
     
 }
 /*fichas del rompecabezas*/
@@ -173,59 +181,7 @@ text-decoration:none; }
 }
 
 
-   
-/*   Responsive landscape iPad */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) { 
 
-    .game-button{
-      display:block;
-      margin:0.4em auto;
-    }       
-      
-    .intro{
-        background: white;
-        position: relative;
-       padding: 15% 5px;  
-    }     
-    
-    #title{
-        font-size: 60px;
-    }    
-    
-    h3{
-    color: dimgray;
-    font-size: 30px;
-    }
-    
-    
-    .container-fluid{
-   background-color: lightcyan;
-    display: block;
-    margin: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 770px;
-
-}
-    
-    
-    .regresar{
-    width: 200px;
-    padding: 2% 5px;
-    margin: 10px auto;
-    text-align: center;
-    background-color: transparent !important;
-    position: relative;
-    /*top: 500px;
-    left: 120px;*/
-    margin-top: -750px;
-    margin-left: 450px;
-        
-    }
     
     
 
@@ -241,5 +197,7 @@ and (orientation : landscape) {
         background: red;
         position: relative;
     }
+
+
 
 
