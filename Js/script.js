@@ -154,7 +154,7 @@ function soltar(eve){
 
     posicionfinal = posxEspacio + parseInt($("#elementos").width());
     console.log("pos final"+ posicionfinal)
-if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 10) >= posxPieza) && ((posyEspacio -10) <= posyPieza) && ((posyEspacio +10) >= posyPieza)){
+if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 30) >= posxPieza) && ((posyEspacio -30) <= posyPieza) && ((posyEspacio +30) >= posyPieza)){
     //alert("Bien hecho!Intentalo nuevamente y gana puntos!");                                                                                                                                 
       divEsp.css("left",posicionfinal + 'px');
       divEsp.css("top" ,posyEspacio + 'px');
