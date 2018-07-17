@@ -44,20 +44,17 @@ class Espacios {
     }
 }
 
-$('#descargarjson').click(function () {
     var arrUsers= [];
     
     $.getJSON('ejemplo.json', function(data){
         
         $.each(data, function(i, resultado){
-          arrUsers.push(new Usuario(resultado.user, resultado.pass, resultado.rompecabeza))
+          arrUsers.push(new Usuario(resultado.user, resultado.pass, resultado.puntaje, resultado.rompecabeza));
         });
         console.log(arrUsers);
         var data= "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(arrUsers));
         
         $("#descargarjson").attr("href","data:"+data);
         $("#descargarjson").attr("download","ejemplo.json");
-        //$("#descargarjson").trigger("click");
     });
     
-});
