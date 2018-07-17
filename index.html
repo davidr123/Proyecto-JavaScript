@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rompecabezas</title>
     
-    <link href="Css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="Css/bootstrap.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/stilo.css">
     <link rel="Shortcut Icon" href="img/puzzle-icon.ico" />
-  <script src="Js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <title>ROMPECABEZAS</title>
 </head>
-<body>
-    <div class="intro">
-       <div id="title"><img src="img/puzzle1.png"> Rompecabezas <img src="img/puzzle2.png"></div>
+    
+    
+<body cz-shortcut-listes="true">
+    <div class="container">
+        <div id="puzzle-title">
+        <img src="img/rompecabezasTitle.png" class="img-fluid">
+        </div>
         
-        <h3>Juega con tus personajes favoritos</h3>
-        <br>
+        <h3 id="subtitle">Juega con tu personaje favorito</h3>
         
-        <div class="buttons">
-            <a href="home.html" class="game-button" style="background-color:#e386b3" ><img src="img/peppa.png"></a>
-            <a href="home2.html" style="background-color:#bfcb04"  class="game-button"><img src="img/dora.png"></a>
-            <a href="home3.html" class="game-button"><img src="img/doraemon-icon.png"></a><br><br> 
-            <a id="descargarjson" href="#" style="background-color:#f14e4e" class="game-button bouncy">Exportar Json</a>
+         <div class="row" id="button-container">
+             <div class="col-sm-4">
+                 <button id="game-button" style="background-color:#e386b3">
+                    <a href="home.html"><img class="img-fluid" src="img/peppa.png">
+                     </a> </button> 
+             </div>
+              
+             
+             <div class="col-sm-4">
+                <button id="game-button" style="background-color:#bfcb04">
+                    <a href="home2.html"><img class="img-fluid" src="img/dora.png">
+                     </a> </button> 
+            </div>
+             
+            <div class="col-sm-4">
+                <button id="game-button">
+                    <a href="home3.html"><img class="img-fluid" src="img/doraemon-icon.png">
+                     </a> </button> 
+            </div>  
+             
+             
+            <a id="export-button" href="#" style="background-color:#f14e4e"><img src="img/download.png" class="img-fluid" >EXPORTAR JSON</a>
          </div>    
     </div>
-    
+       
+<script src="Js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="Js/scriptindex.js"></script>  
+    <script src="Js/bootstrap.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
 </body>
 </html>
