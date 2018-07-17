@@ -90,7 +90,7 @@ var contadorErrores = 0;
 //            newdiv.css('left', espacio.posx + "px");
 //            newdiv.css('top', espacio.posy+ "px");
 //            newdiv.attr("id", "tab"+espacio.id);
-            $('#tablero').append("<div id='tab"+espacio.id+"' style='background-color: transparent; border-style: dotted;left: "+espacio.posx+"; top: "+espacio.posy+"'></div>");
+            $('#tablero').append("<div id='tab"+espacio.id+"' style='background-color: transparent; left: "+espacio.posx+"; top: "+espacio.posy+"'></div>");
         });
     });
 
