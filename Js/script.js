@@ -190,5 +190,3 @@ if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 10) >= posxPieza) && ((
     }
     console.log("Juego Terminado " +eve);
 }
-
-
