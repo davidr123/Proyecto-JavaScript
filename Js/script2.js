@@ -58,8 +58,8 @@ var contadorErrores = 0;
         $.each(data, function(i, resultado){
           arregloUsuarios.push(new Usuario(resultado))
         });
-        //console.log(arregloUsuarios[0].rompecabeza[1].piezas[0].width);
-        
+        console.log(arregloUsuarios[0].rompecabeza[1].piezas[0].width);
+        $('#puntaje').html(arregloUsuarios[0].puntaje);
         $.each(arregloUsuarios[0].rompecabeza[1].piezas, function(i, pieza){
             //var newdiv = $(document.createElement('div'));
 //            newdiv.css("background-image", "url('./img/peppa/" + pieza.id+ ".jpg')");
@@ -105,10 +105,6 @@ function inicio(eve){
 }
 
 function mover(eve){
-    
-   
-        
-      
     var touchLocation = eve.targetTouches[0];
      // $("#"+ e.target.id).css("left", touchLocation.clientX + 'px');
     var id = $("#"+ eve.target.id).attr("id");
@@ -119,12 +115,12 @@ function mover(eve){
 
 function soltar(eve){
     
-    
+    console.log(arregloUsuarios);
     
     currentlyDragging = eve.target;
     var  divEsp = $("#"+eve.target.id);
     var tablEspacio  = $("#tab"+eve.target.id);
-    
+    console.log(divEsp);
     console.log("div actual en evento: "+divEsp.attr("id"));
     console.log("Movimientos: " + divEsp.css("backgroundColor"));
     console.log("Movimientos: " + tablEspacio.css("borderColor"));
@@ -151,8 +147,7 @@ function soltar(eve){
     posicionfinal = posxEspacio + parseInt($("#elementos").width());
     console.log("pos final"+ posicionfinal)
 if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 10) >= posxPieza) && ((posyEspacio -10) <= posyPieza) && ((posyEspacio +10) >= posyPieza)){
-    console.log("Bien hecho!");
-                                                                                                                                              
+    //alert("Bien hecho!Intentalo nuevamente y gana puntos!");                                                                                                                                 
       divEsp.css("left",posicionfinal + 'px');
       divEsp.css("top" ,posyEspacio + 'px');
       divEsp.off("touchstart", inicio, false);
@@ -161,15 +156,39 @@ if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 10) >= posxPieza) && ((
       divEsp.off("touchmove", mover, false);
       contadorAciertos++;
       if (contadorAciertos == 9){
-        alert("GANASTE");
+        if((contadorAciertos+contadorErrores)<15){
+           alert("GANASTE PUNTOS");
+            arregloUsuarios[0].puntaje++;
+            $('#puntaje').html(arregloUsuarios[0].puntaje);
+            $.ajax({
+                url: 'guardarjson.php',
+                method: 'post',
+                data: {
+                    "enviodatos": arregloUsuarios
+                },
+                success: function (data) {
+                    //alert(data);
+                    //window.location.href="index.html";
+                    //alert("au: "+usuarios.length);
+                }
+            });  
+        }else{
+            alert("Bien hecho!Intentalo nuevamente y gana puntos!");
+            window.location.href="index.html";
+        }
+        
+          
+          
       }
     }else{
       console.log("pieza desubicada vuelve intentarlo");
-      divEsp.css("left", piezas[eve.target.id-1].x + 'px');
-      divEsp.css("top" ,piezas[eve.target.id-1].y + 'px');
+      
+      divEsp.css("left",arregloUsuarios[0].rompecabeza[1].piezas[eve.target.id-1].posx);
+      divEsp.css("top",arregloUsuarios[0].rompecabeza[1].piezas[eve.target.id-1].posy);
       contadorErrores++;
       if (contadorErrores == 15){
         alert("PERDISTE");
+        window.location.href="index.html";
       }
     }
     console.log("Juego Terminado " +eve);
