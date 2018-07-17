@@ -66,9 +66,9 @@ var contadorErrores = 0;
         $.each(data, function(i, resultado){
           arregloUsuarios.push(new Usuario(resultado))
         });
-        console.log(arregloUsuarios[0].rompecabeza[1].piezas[0].width);
+        console.log(arregloUsuarios[0].rompecabeza[2].piezas[0].width);
         $('#puntaje').html(arregloUsuarios[0].puntaje);
-        $.each(arregloUsuarios[0].rompecabeza[1].piezas, function(i, pieza){
+        $.each(arregloUsuarios[0].rompecabeza[2].piezas, function(i, pieza){
             //var newdiv = $(document.createElement('div'));
 //            newdiv.css("background-image", "url('./img/peppa/" + pieza.id+ ".jpg')");
 //            newdiv.css('left', pieza.posx+ "px");
@@ -83,7 +83,7 @@ var contadorErrores = 0;
 
         });
 
-        arregloUsuarios[0].rompecabeza[1].espacios.forEach( function(espacio){
+        arregloUsuarios[0].rompecabeza[2].espacios.forEach( function(espacio){
 //            var newdiv =  $( document.createElement('div'));
 //            newdiv.css('backgroundColor',"transparent");
 //            newdiv.css("border-style", "dotted");
@@ -176,7 +176,6 @@ if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 30) >= posxPieza) && ((
                 },
                 success: function (data) {
                     //alert(data);
-                    //window.location.href="index.html";
                     //alert("au: "+usuarios.length);
                 }
             });  
@@ -191,8 +190,8 @@ if (((posxEspacio -200) <= posxPieza) && ((posxEspacio + 30) >= posxPieza) && ((
     }else{
       console.log("pieza desubicada vuelve intentarlo");
       
-      divEsp.css("left",arregloUsuarios[0].rompecabeza[1].piezas[eve.target.id-1].posx);
-      divEsp.css("top",arregloUsuarios[0].rompecabeza[1].piezas[eve.target.id-1].posy);
+      divEsp.css("left",arregloUsuarios[0].rompecabeza[2].piezas[eve.target.id-1].posx);
+      divEsp.css("top",arregloUsuarios[0].rompecabeza[2].piezas[eve.target.id-1].posy);
       contadorErrores++;
       if (contadorErrores == 15){
         alert("PERDISTE");
