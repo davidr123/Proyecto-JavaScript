@@ -1,6 +1,4 @@
-
-    
-  @import url('https://fonts.googleapis.com/css?family=Gaegu:400,700|Kranky');
+@import url('https://fonts.googleapis.com/css?family=Gaegu:400,700|Kranky');
 
 body { 
 background-image: url(../img/fondoIntro.jpg);
@@ -244,7 +242,9 @@ top: 5px;
 .container{
 padding: 100px 0 0 0;
 position: relative;
-left: 50%;
+left: 0%;
 }
+    
+    
 }
 
