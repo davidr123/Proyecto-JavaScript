@@ -208,6 +208,25 @@ background: red;
 position: relative;
 }
 
+@media (min-width: 425px, max-width: 768px){
+.container-fluid {
+display: block;
+position: absolute;
+height: 407px;
+left: -4px;
+}
+.fondo{
+position: absolute;
+left: -125px;
+top: 5px;
+}
+.container{
+padding: 100px 0 0 0;
+position: relative;
+left: 50%;
+}
+}
+
 @media (min-width: 768px, max-width: 1440px){
 .container-fluid {
 display: block;
