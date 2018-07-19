@@ -8,10 +8,6 @@ background-attachment: fixed;
 background-size: cover;
 }
 
-body.bg{
-    overflow-y: hidden;
-}
-
 .regresar{
 position: relative;
 padding: 350px 0 250px 0;
