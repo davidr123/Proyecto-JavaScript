@@ -139,13 +139,12 @@ position: absolute;
 }
 
 .container-fluid{
-background-color: lightcyan;
 margin: auto;
 display: block;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
-height: 770px;
+height: 750px;
 overflow: hidden;
 
 }
@@ -210,7 +209,6 @@ position: relative;
 
 @media (min-width: 768px, max-width: 1440px){
 .container-fluid {
-background-color: lightcyan;
 display: block;
 position: absolute;
 height: 407px;
@@ -229,10 +227,9 @@ left: 50%;
 }
 @media (min-width: 1440px){
 .container-fluid {
-background-color: lightcyan;
 display: block;
 position: absolute;
-height: 765px;
+height: 750px;
 }
 .fondo{
 position: absolute;
